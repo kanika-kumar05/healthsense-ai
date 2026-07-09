@@ -1,0 +1,1 @@
+## No rules needed for UI-only app

@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- Header -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Health Risk Analysis"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorOnSurface"
+            android:layout_marginBottom="4dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Powered by your smartwatch + self-assessment data"
+            android:textSize="13sp"
+            android:textColor="@color/colorOnSurfaceVariant"
+            android:layout_marginBottom="28dp"/>
+
+        <!-- Risk Result Card -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardRiskResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            style="@style/Widget.HealthSenseAI.Card">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="24dp"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Risk Level"
+                    android:textSize="13sp"
+                    android:textColor="@color/colorOnSurfaceVariant"
+                    android:layout_marginBottom="16dp"/>
+
+                <!-- Risk badge -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardRiskBadge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="50dp"
+                    app:cardElevation="0dp"
+                    app:cardBackgroundColor="@color/colorSecondaryContainer"
+                    android:layout_marginBottom="12dp">
+
+                    <TextView
+                        android:id="@+id/tvRiskLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="--"
+                        android:textSize="22sp"
+                        android:textStyle="bold"
+                        android:paddingHorizontal="32dp"
+                        android:paddingVertical="14dp"
+                        android:textColor="@color/colorOnSecondaryContainer"/>
+                </com.google.android.material.card.MaterialCardView>
+
+                <TextView
+                    android:id="@+id/tvRiskDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Tap 'Analyze Health' to get your risk assessment."
+                    android:textSize="14sp"
+                    android:textColor="@color/colorOnSurfaceVariant"
+                    android:gravity="center"
+                    android:layout_marginTop="4dp"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Loading indicator -->
+        <com.google.android.material.progressindicator.LinearProgressIndicator
+            android:id="@+id/progressBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:visibility="gone"
+            android:indeterminate="true"/>
+
+        <!-- Error message -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardError"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:visibility="gone"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="0dp"
+            app:cardBackgroundColor="#FFF3F3">
+
+            <TextView
+                android:id="@+id/tvError"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:textSize="14sp"
+                android:textColor="#B00020"/>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Input summary card -->
+        <!-- Gemini Suggestions Section -->
+        <LinearLayout
+            android:id="@+id/layoutSuggestions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="20dp"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="12dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="💡 Preventive Suggestions"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorOnSurface"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Powered by Gemini"
+                    android:textSize="11sp"
+                    android:textColor="@color/colorOnSurfaceVariant"/>
+            </LinearLayout>
+
+            <com.google.android.material.progressindicator.LinearProgressIndicator
+                android:id="@+id/progressGemini"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:visibility="gone"
+                android:indeterminate="true"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvSuggestions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"
+                android:clipToPadding="false"/>
+        </LinearLayout>
+
+        <!-- Input summary card -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            style="@style/Widget.HealthSenseAI.Card">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Data Source: Smartwatch"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor="#1565C0"
+                    android:layout_marginBottom="12dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="8dp">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:text="❤️  Heart Rate"
+                        android:textColor="@color/colorOnSurface" android:textSize="14sp"/>
+                    <TextView android:id="@+id/tvSrcHeartRate"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="--" android:textColor="@color/colorOnSurfaceVariant"
+                        android:textSize="14sp" android:textStyle="bold"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="8dp">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:text="🩸  SpO₂"
+                        android:textColor="@color/colorOnSurface" android:textSize="14sp"/>
+                    <TextView android:id="@+id/tvSrcSpo2"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="--" android:textColor="@color/colorOnSurfaceVariant"
+                        android:textSize="14sp" android:textStyle="bold"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:text="📋  Self-Assessment"
+                        android:textColor="@color/colorOnSurface" android:textSize="14sp"/>
+                    <TextView android:id="@+id/tvSrcSelfAssess"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Loaded" android:textColor="@color/colorOnSurfaceVariant"
+                        android:textSize="14sp"/>
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Analyze Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnAnalyzeHealth"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="Analyze Health"
+            android:textSize="16sp"
+            app:cornerRadius="12dp"
+            style="@style/Widget.HealthSenseAI.Button"/>
+
+    </LinearLayout>
+</ScrollView>

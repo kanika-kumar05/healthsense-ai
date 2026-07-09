@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">HealthSenseAI</string>
+    <string name="get_started">Get Started</string>
+    <string name="login">Login</string>
+    <string name="signup">Sign up</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="create_account">Create Account</string>
+    <string name="predicted_risk">Predicted Risk: Normal</string>
+    <string name="view_detailed_insights">View Detailed Insights</string>
+    <string name="ai_model_prediction_coming">AI Model Prediction (Coming Soon)</string>
+    <string name="current_risk_low">Your current risk level is LOW</string>
+    <string name="learn_more">Learn More</string>
+    <string name="notifications">Notifications</string>
+    <string name="profile">Profile</string>
+    <string name="home">Home</string>
+    <string name="insights">Insights</string>
+    <string name="predictions">Predictions</string>
+    <string name="user_name_dummy">Kuldeep</string>
+    <string name="smartwatch_status_dummy">NoiseFit — Connected</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="app_info">App Info</string>
+    <string name="privacy">Privacy</string>
+    <string name="terms">Terms</string>
+    <string name="onboard_title_1">Track Your Health from Your Smartwatch</string>
+    <string name="onboard_title_2">Google Fit Sync (Coming Soon)</string>
+    <string name="onboard_title_3">AI Disease Prediction (Coming Soon)</string>
+    <string name="onboard_sub_1">Monitor heart rate, SpO₂, sleep, stress, and breath rate</string>
+    <string name="onboard_sub_2">Seamless sync of smartwatch metrics planned</string>
+    <string name="onboard_sub_3">Personalized risk predictions with future ML integration</string>
+    <string name="dummy_alert_stress">High Stress Detected (Sample Alert)</string>
+    <string name="dummy_alert_spo2">Low SpO₂ (Sample Alert)</string>
+    <string name="dummy_alert_sleep">Irregular Sleep Pattern</string>
+    <string name="invalid_credentials">Invalid email or password</string>
+    <string name="signup_failed">Signup failed. Check email and password</string>
+    <string name="account_created">Account created</string>
+    <string name="login_success">Logged in</string>
+    <string name="or_sign_in_with">Or sign in with</string>
+    <string name="sign_in_google">Sign in with Google</string>
+    <string name="google_signin_failed">Google Sign-In failed</string>
+    <string name="welcome_back">Welcome Back</string>
+    <string name="login_subtitle">Please sign in to continue</string>
+    <string name="default_web_client_id">YOUR_WEB_CLIENT_ID_FROM_FIREBASE_CONSOLE</string>
+    <string name="logout">Logout</string>
+    <string name="logout_success">Logged out</string>
+</resources>

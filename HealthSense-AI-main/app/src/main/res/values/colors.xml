@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Premium Medical Color Palette -->
+    
+    <!-- Primary Colors - Deep Navy Blue -->
+    <color name="colorPrimary">#1565C0</color>
+    <color name="colorPrimaryVariant">#0D47A1</color>
+    <color name="colorOnPrimary">#FFFFFF</color>
+    
+    <!-- Secondary Colors - Vibrant Mint -->
+    <color name="colorSecondary">#00BFA5</color>
+    <color name="colorSecondaryVariant">#009688</color>
+    <color name="colorOnSecondary">#FFFFFF</color>
+    
+    <!-- Tertiary Colors - Soft Accent -->
+    <color name="colorTertiary">#4FC3F7</color>
+    <color name="colorTertiaryVariant">#039BE5</color>
+    <color name="colorOnTertiary">#FFFFFF</color>
+    
+    <!-- Background & Surface Colors -->
+    <color name="colorBackground">#F5F7FA</color>
+    <color name="colorSurface">#FFFFFF</color>
+    <color name="colorSurfaceVariant">#EEF2F6</color>
+    
+    <!-- Text Colors -->
+    <color name="colorOnBackground">#102027</color>
+    <color name="colorOnSurface">#263238</color>
+    <color name="colorOnSurfaceVariant">#546E7A</color>
+    
+    <!-- Medical Status Colors (Pastel Backgrounds) -->
+    <color name="colorError">#D32F2F</color>
+    <color name="colorOnError">#FFFFFF</color>
+    <color name="colorErrorContainer">#FFDAD6</color>
+    <color name="colorOnErrorContainer">#B71C1C</color>
+    
+    <color name="colorSuccess">#2E7D32</color>
+    <color name="colorSuccessContainer">#E8F5E9</color>
+    
+    <color name="colorWarning">#F57C00</color>
+    <color name="colorWarningContainer">#FFF3E0</color>
+    
+    <!-- Shadows & Elevation -->
+    <color name="shadowLight">#1A000000</color>
+    <color name="shadowMedium">#33000000</color>
+
+    <!-- Dark Theme Colors -->
+    <color name="colorPrimaryDark">#90CAF9</color>
+    <color name="colorOnPrimaryDark">#0D47A1</color>
+    
+    <color name="colorSecondaryDark">#64FFDA</color>
+    <color name="colorOnSecondaryDark">#004D40</color>
+    
+    <color name="colorBackgroundDark">#121212</color>
+    <color name="colorSurfaceDark">#1E1E1E</color>
+    <color name="colorSurfaceVariantDark">#2C2C2C</color>
+    
+    <color name="colorOnBackgroundDark">#E0E0E0</color>
+    <color name="colorOnSurfaceDark">#E0E0E0</color>
+    <color name="colorOnSurfaceVariantDark">#B0BEC5</color>
+
+    <!-- Gradient -->
+    <color name="gradientStart">#1565C0</color>
+    <color name="gradientEnd">#00BFA5</color>
+
+    <!-- Light Medical Surfaces -->
+    <color name="medicalTealLight">#E0F7FA</color>
+    <color name="medicalGrayLight">#F5F7FA</color>
+
+    <!-- Material 3 Secondary Container -->
+    <color name="colorSecondaryContainer">#B2DFDB</color>
+    <color name="colorOnSecondaryContainer">#00332F</color>
+</resources>

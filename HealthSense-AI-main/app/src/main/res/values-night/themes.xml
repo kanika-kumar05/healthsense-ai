@@ -1,0 +1,71 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    
+    <!-- Material Design 3 Healthcare Dark Theme -->
+    <style name="Theme.HealthSenseAI" parent="Theme.Material3.Dark.NoActionBar">
+        <!-- Primary Colors -->
+        <item name="colorPrimary">@color/colorPrimaryDark</item>
+        <item name="colorOnPrimary">@color/colorOnPrimaryDark</item>
+        <item name="colorPrimaryContainer">@color/colorPrimaryVariant</item>
+        <item name="colorOnPrimaryContainer">@color/colorOnPrimary</item>
+        
+        <!-- Secondary Colors -->
+        <item name="colorSecondary">@color/colorSecondaryDark</item>
+        <item name="colorOnSecondary">@color/colorOnSecondaryDark</item>
+        <item name="colorSecondaryContainer">#004D40</item> <!-- Darker Teal -->
+        <item name="colorOnSecondaryContainer">@color/colorSecondaryDark</item>
+        
+        <!-- Background & Surface -->
+        <item name="android:windowBackground">@color/colorBackgroundDark</item>
+        <item name="colorSurface">@color/colorSurfaceDark</item>
+        <item name="colorSurfaceVariant">@color/colorSurfaceVariantDark</item>
+        <item name="colorOnSurface">@color/colorOnSurfaceDark</item>
+        <item name="colorOnSurfaceVariant">@color/colorOnSurfaceVariantDark</item>
+        
+        <!-- Error Colors -->
+        <item name="colorError">@color/colorError</item>
+        <item name="colorOnError">@color/colorOnError</item>
+        
+        <!-- Status Bar -->
+        <item name="android:statusBarColor">@color/colorBackgroundDark</item>
+        <item name="android:windowLightStatusBar">false</item>
+
+        <!-- Typography -->
+        <item name="textAppearanceHeadline1">@style/TextAppearance.HealthSenseAI.Headline1.Dark</item>
+        <item name="textAppearanceHeadline2">@style/TextAppearance.HealthSenseAI.Headline2.Dark</item>
+        <item name="textAppearanceBody1">@style/TextAppearance.HealthSenseAI.Body1.Dark</item>
+    </style>
+    
+    <!-- Dark Text Appearances -->
+    <style name="TextAppearance.HealthSenseAI.Headline1.Dark" parent="TextAppearance.Material3.HeadlineLarge">
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">28sp</item>
+    </style>
+    
+    <style name="TextAppearance.HealthSenseAI.Headline2.Dark" parent="TextAppearance.Material3.HeadlineMedium">
+        <item name="android:textColor">@color/colorOnSurfaceDark</item>
+         <item name="android:textStyle">bold</item>
+    </style>
+    
+    <style name="TextAppearance.HealthSenseAI.Body1.Dark" parent="TextAppearance.Material3.BodyLarge">
+        <item name="android:textColor">@color/colorOnSurfaceVariantDark</item>
+    </style>
+
+    <!-- Dark Card Style -->
+    <style name="Widget.HealthSenseAI.Card" parent="Widget.Material3.CardView.Elevated">
+        <item name="cardBackgroundColor">@color/colorSurfaceDark</item>
+        <item name="cardElevation">2dp</item>
+        <item name="cardCornerRadius">20dp</item>
+        <item name="android:layout_margin">8dp</item>
+        <item name="strokeColor">@android:color/transparent</item>
+    </style>
+    
+    <!-- Button Style -->
+    <style name="Widget.HealthSenseAI.Button" parent="Widget.Material3.Button">
+        <item name="backgroundTint">@color/colorPrimaryDark</item>
+        <item name="android:textColor">@color/colorOnPrimaryDark</item>
+        <item name="cornerRadius">12dp</item>
+        <item name="android:paddingVertical">12dp</item>
+    </style>
+
+</resources>

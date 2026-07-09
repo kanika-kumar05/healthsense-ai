@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.healthsenseai.ui.fragments.HomeFragment" />
+    <fragment
+        android:id="@+id/nav_insights"
+        android:name="com.healthsenseai.ui.fragments.InsightsFragment" />
+    <fragment
+        android:id="@+id/nav_predictions"
+        android:name="com.healthsenseai.ui.fragments.PredictionsFragment" />
+    <fragment
+        android:id="@+id/nav_notifications"
+        android:name="com.healthsenseai.ui.fragments.NotificationsFragment" />
+    <fragment
+        android:id="@+id/nav_profile"
+        android:name="com.healthsenseai.ui.fragments.ProfileFragment" />
+
+</navigation>

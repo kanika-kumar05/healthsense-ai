@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher_foreground"
+        android:label="HealthSenseAI"
+        android:theme="@style/Theme.HealthSenseAI">
+
+        <activity
+            android:name="com.healthsenseai.ui.OnboardingActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.healthsenseai.ui.LoginActivity" />
+        <activity android:name="com.healthsenseai.ui.SignupActivity" />
+        <activity android:name="com.healthsenseai.ui.MainActivity" />
+        <activity android:name="com.healthsenseai.ui.SelfAssessmentActivity" />
+
+    </application>
+
+</manifest>
