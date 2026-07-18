@@ -285,7 +285,7 @@ Using **Postman**:
 4. Enter
 
 ```
-http://127.0.0.1:5000/predict
+POST https://healthsense-api-3.onrender.com/predict
 ```
 
 5. Select
