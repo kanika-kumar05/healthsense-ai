@@ -1,164 +1,256 @@
-# 🩺 HealthSense API – AI-Powered Health Risk Prediction
+# 🩺 HealthSense AI – Android Health Risk Prediction System
 
-HealthSense API is a Machine Learning–based healthcare risk prediction system that analyzes a user's basic health parameters and predicts a possible health risk category.
-
-The system uses a trained **Random Forest Classifier** to classify health conditions into five categories:
-
-* 🫀 Cardiac Risk
-* 🫁 Respiratory Risk
-* 🌡️ Fever Risk
-* 😰 Stress Risk
-* ✅ Normal
-
-The trained Machine Learning model is integrated with a **Flask REST API**, allowing health data to be sent in JSON format and predictions to be received instantly.
+> **An AI-powered Android application that predicts potential health risks using Machine Learning and provides personalized preventive health recommendations using Google Gemini AI.**
 
 ---
 
-## 🚀 Features
+## 📖 Overview
 
-* Predicts health risks using Machine Learning
-* Accepts health parameters through a REST API
-* Provides real-time health risk predictions
-* Uses a Random Forest classification model
-* Supports five health risk categories
-* Performs feature scaling using StandardScaler
-* Converts prediction labels using LabelEncoder
-* Returns predictions in JSON format
-* Can be tested using Postman
-* Can be deployed as a cloud-based API
+HealthSense AI is an intelligent Android healthcare application developed to help users better understand their overall health by analyzing essential health parameters and predicting potential health risks.
 
----
+The application combines the power of **Machine Learning**, **Artificial Intelligence**, and **Android development** to provide users with instant health-risk predictions along with personalized preventive suggestions.
 
-## 🧠 Machine Learning Model
+Users manually enter their health information into the Android application. The data is securely sent to a **Flask REST API**, where a trained **Random Forest Classifier** predicts the user's health risk category. The prediction is then sent to **Google Gemini AI**, which generates personalized health recommendations based on the user's vitals and predicted risk level.
 
-The model was trained using a synthetically generated healthcare dataset containing approximately **6,000 health records**.
+The project follows the **MVVM Architecture** with the **Repository Pattern**, making the application scalable, maintainable, and easy to extend.
 
-### Input Features
-
-| Feature            | Description                     |
-| ------------------ | ------------------------------- |
-| `heart_rate`       | Number of heartbeats per minute |
-| `spo2`             | Blood oxygen saturation level   |
-| `sleep_hours`      | Average sleep duration          |
-| `stress_level`     | Self-reported stress level      |
-| `body_temperature` | Body temperature                |
-| `age`              | Age of the person               |
-| `systolic_bp`      | Systolic blood pressure         |
-| `diastolic_bp`     | Diastolic blood pressure        |
+> **Note:** HealthSense AI currently works as an Android application where users enter their health details manually. Integration with real smartwatch sensors is planned for future versions.
 
 ---
 
-## 🏷️ Prediction Categories
+# ✨ Features
 
-The API predicts one of the following health risk categories:
-
-| Prediction         | Description                                                   |
-| ------------------ | ------------------------------------------------------------- |
-| `Cardiac Risk`     | Indicates a possible heart- or blood-pressure-related risk    |
-| `Respiratory Risk` | Indicates a possible oxygen-level or respiratory-related risk |
-| `Fever Risk`       | Indicates an elevated body temperature                        |
-| `Stress Risk`      | Indicates high stress combined with insufficient sleep        |
-| `Normal`           | Health parameters are within the expected ranges              |
+* 📱 Android application developed using Kotlin
+* 🧠 Machine Learning-based health risk prediction
+* 🤖 Personalized health suggestions using Google Gemini AI
+* ☁️ Flask REST API deployed on Render
+* 🔥 Firebase Email & Google Authentication
+* 🏗️ MVVM Architecture with Repository Pattern
+* 📊 Health prediction dashboard
+* 👤 User profile management
+* 📈 Health insights and prediction history
+* 🌐 REST API communication using Retrofit
+* ⚡ Real-time prediction results
+* 📦 Modular and scalable architecture
 
 ---
 
-## 🛠️ Technologies Used
+# 🎯 Project Objective
+
+The primary objective of HealthSense AI is to build an intelligent Android healthcare application capable of:
+
+* Predicting possible health risks using Machine Learning
+* Providing personalized preventive health suggestions using AI
+* Delivering fast cloud-based health predictions through REST APIs
+* Demonstrating the integration of Android, AI, Machine Learning, and Cloud technologies in a single application
+
+---
+
+# 🧠 Machine Learning Model
+
+The Machine Learning model was trained using a synthetically generated healthcare dataset containing approximately **6,000 health records**.
+
+The model uses a **Random Forest Classifier** to classify users into one of five health risk categories.
+
+### 📥 Input Features
+
+| Feature              | Description                 |
+| -------------------- | --------------------------- |
+| ❤️ Heart Rate        | Heart beats per minute      |
+| 🫁 SpO₂              | Blood oxygen saturation (%) |
+| 😴 Sleep Hours       | Average hours of sleep      |
+| 😰 Stress Level      | Self-reported stress score  |
+| 🌡️ Body Temperature  | Body temperature (°C)       |
+| 👤 Age               | Age of the user             |
+| 💓 Systolic BP       | Systolic blood pressure     |
+| 💙 Diastolic BP      | Diastolic blood pressure    |
+
+---
+
+# 🏷️ Health Risk Categories
+
+The model predicts one of the following health risk categories:
+
+| Risk Category       | Description                                   |
+| ------------------- | --------------------------------------------- |
+| ❤️ Cardiac Risk     | Possible heart or blood-pressure related risk |
+| 🫁 Respiratory Risk | Low oxygen saturation or respiratory issues   |
+| 🌡️ Fever Risk      | Elevated body temperature detected            |
+| 😰 Stress Risk      | High stress combined with insufficient sleep  |
+| ✅ Normal            | Health parameters are within normal limits    |
+
+---
+
+# 📱 Android Application
+
+The Android application serves as the primary interface for users.
+
+### Users can:
+
+* Register using Firebase Authentication
+* Login using Email or Google Sign-In
+* Enter health parameters
+* View AI-predicted health risks
+* Receive personalized preventive suggestions
+* View health insights
+* Manage personal health information
+
+The application follows the **MVVM Architecture** to ensure clean code organization and maintainability.
+
+---
+
+# 🏛️ System Architecture
+
+The complete system consists of four major components:
+
+```text
+User
+   │
+   ▼
+Android Application (Kotlin + MVVM)
+   │
+   ▼
+Flask REST API (Render)
+   │
+   ▼
+Random Forest ML Model
+   │
+   ▼
+Prediction Result
+   │
+   ▼
+Google Gemini AI
+   │
+   ▼
+Personalized Health Suggestions
+```
+
+---
+
+# ⚙️ Technologies Used
+
+## 📱 Android
+
+* Kotlin
+* Android Studio
+* MVVM Architecture
+* LiveData
+* ViewModel
+* Repository Pattern
+* Retrofit
+* SharedPreferences
+
+## 🤖 Artificial Intelligence
+
+* Google Gemini AI
+
+## 🧠 Machine Learning
 
 * Python
-* Flask
 * Scikit-learn
-* Pandas
-* NumPy
 * Random Forest Classifier
 * StandardScaler
 * LabelEncoder
+* Pandas
+* NumPy
 * Pickle
-* Postman
+
+## 🌐 Backend
+
+* Flask
+* Gunicorn
+* REST API
 * Render
+
+## 🔥 Authentication
+
+* Firebase Authentication
+* Google Sign-In
+
+## 🛠️ Development Tools
+
+* Android Studio
+* VS Code
+* Postman
+* Git
+* GitHub
 
 ---
 
-## 📁 Project Structure
+## 📂 Project Structure
 
 ```text
-healthsense-api/
+healthsense-ai/
 │
 ├── .ipynb_checkpoints/
 │
-├── HealthSense-AI-main/                # Android application
-│   │
-│   ├── app/                            # Android source code and resources
-│   │
+├── HealthSense-AI-main/                  # Android application
+│   ├── app/                              # Android source code
 │   ├── gradle/
-│   │   └── wrapper/                    # Gradle wrapper configuration
-│   │
-│   ├── healthsense-api/                # Additional API-related files
-│   ├── build.gradle                    # Project-level Gradle configuration
-│   ├── gradle.properties               # Gradle project properties
-│   ├── gradlew                         # Gradle executable for Linux/macOS
-│   ├── gradlew.bat                     # Gradle executable for Windows
-│   └── settings.gradle                 # Android project settings
+│   │   └── wrapper/
+│   ├── healthsense-api/                  # Android API module
+│   ├── build.gradle
+│   ├── gradle.properties
+│   ├── gradlew
+│   ├── gradlew.bat
+│   ├── settings.gradle
+│   └── README.md
 │
-├── app.py                              # Flask REST API
-├── dataset1.ipynb                      # Dataset generation and model training
-├── healthsense_model_final.pkl         # Trained Machine Learning model
-├── healthsense_synthetic_dataset.csv   # Synthetic healthcare dataset
-├── label_encoder.pkl                   # Saved LabelEncoder
-├── scaler.pkl                          # Saved StandardScaler
-├── requirements.txt                    # Python dependencies
-├── render.yaml                         # Application configuration file
-└── README.md                           # Project documentation
+├── app.py                               # Flask REST API
+├── dataset1.ipynb                       # Dataset generation & model training
+├── healthsense_model_final.pkl          # Trained Random Forest model
+├── healthsense_synthetic_dataset.csv    # Synthetic healthcare dataset
+├── scaler.pkl                           # StandardScaler
+├── label_encoder.pkl                    # LabelEncoder
+├── requirements.txt                     # Python dependencies
+├── render.yaml                          # Render deployment configuration
+└── README.md                            # Main project documentation
 ```
-
-### File Description
-
-* `HealthSense-AI-main/` – Contains the complete Android mobile application and its configuration files
-* `app/` – Contains the Android source code, activities, layouts, resources, and application configuration
-* `app.py` – Contains the Flask REST API that processes health data and returns health-risk predictions
-* `dataset1.ipynb` – Generates the synthetic dataset, preprocesses data, trains and evaluates the Machine Learning model
-* `healthsense_synthetic_dataset.csv` – Contains the generated synthetic healthcare dataset
-* `healthsense_model_final.pkl` – Stores the trained Random Forest classification model
-* `scaler.pkl` – Stores the fitted StandardScaler used for feature scaling
-* `label_encoder.pkl` – Stores the fitted LabelEncoder used to convert predictions into readable health-risk categories
-* `requirements.txt` – Contains all required Python libraries and dependencies
-* `render.yaml` – Contains application configuration settings
-* `build.gradle` – Contains the Android project's build configuration and dependencies
-* `gradle.properties` – Contains Gradle configuration properties
-* `gradlew` – Gradle executable for Linux and macOS
-* `gradlew.bat` – Gradle executable for Windows
-* `settings.gradle` – Defines the modules included in the Android application
-* `README.md` – Contains the project documentation
 
 ---
 
+# 📄 File Description
 
-## 🔗 API Endpoints
+| File                                 | Description                           |
+| ------------------------------------ | ------------------------------------- |
+| 📱 app/                              | Android application source code       |
+| 🐍 app.py                            | Flask REST API                        |
+| 📊 dataset1.ipynb                    | Dataset generation and model training |
+| 📁 healthsense_synthetic_dataset.csv | Synthetic healthcare dataset          |
+| 🧠 healthsense_model_final.pkl       | Trained Random Forest model           |
+| ⚖️ scaler.pkl                        | Feature scaler                        |
+| 🏷️ label_encoder.pkl                | Label encoder                         |
+| 📦 requirements.txt                  | Required Python packages              |
+| ☁️ render.yaml                       | Render deployment configuration       |
+| 📖 README.md                         | Project documentation                 |
 
-### Home Endpoint
+---
+
+# 🔗 REST API Endpoints
+
+## 🏠 Home Endpoint
 
 ```http
 GET /
 ```
 
-Example response:
+### Response
 
 ```json
 {
-  "message": "Welcome to the HealthSense API"
+  "message": "Welcome to HealthSense AI API"
 }
 ```
 
 ---
 
-### Health Risk Prediction Endpoint
+## 🩺 Predict Health Risk
 
 ```http
 POST /predict
 ```
 
-The `/predict` endpoint accepts health information in JSON format and returns the predicted health risk.
-
-### Example Request
+### Sample Request
 
 ```json
 {
@@ -173,7 +265,7 @@ The `/predict` endpoint accepts health information in JSON format and returns th
 }
 ```
 
-### Example Response
+### Sample Response
 
 ```json
 {
@@ -183,117 +275,97 @@ The `/predict` endpoint accepts health information in JSON format and returns th
 
 ---
 
-## 🧪 Testing the API Using Postman
+# 🧪 Testing the API
 
-1. Start the Flask application.
+Using **Postman**:
 
+1. Run the Flask application.
 2. Open Postman.
+3. Select **POST**.
+4. Enter
 
-3. Select the `POST` request method.
-
-4. Enter the following URL:
-
-```text
+```
 http://127.0.0.1:5000/predict
 ```
 
-5. Open:
+5. Select
 
-```text
-Body → raw → JSON
+```
+Body → Raw → JSON
 ```
 
-6. Enter the health information:
-
-```json
-{
-  "heart_rate": 80,
-  "spo2": 98,
-  "sleep_hours": 7,
-  "stress_level": 3,
-  "body_temperature": 36.8,
-  "age": 25,
-  "systolic_bp": 120,
-  "diastolic_bp": 80
-}
-```
+6. Paste the sample JSON.
 
 7. Click **Send**.
 
-Example output:
-
-```json
-{
-  "prediction": "Normal"
-}
-```
-
 ---
 
-## ☁️ Deployment
+# ☁️ Deployment
 
-The Flask API can be deployed using Render.
+The Flask backend is deployed using **Render**.
 
-Use the following build command:
+### Build Command
 
 ```bash
 pip install -r requirements.txt
 ```
 
-Use the following start command:
+### Start Command
 
 ```bash
 gunicorn app:app
 ```
 
-After deployment, the API can be accessed using:
+Example API URL
 
-```text
-https://your-healthsense-api.onrender.com
+```
+https://healthsense-api-3.onrender.com
 ```
 
-The prediction endpoint will be:
+Prediction Endpoint
 
-```text
-https://your-healthsense-api.onrender.com/predict
+```
+https://healthsense-api-3.onrender.com/predict
 ```
 
 ---
 
-## 🔮 Future Enhancements
+# 🚀 Future Enhancements
 
-* Integrate real-time wearable health data
-* Add user authentication
-* Connect the application to a database
-* Develop a responsive React frontend
-* Add health history tracking
-* Generate personalized health recommendations
-* Add health trends and visualization dashboards
-* Integrate an AI-powered health chatbot
-* Improve the model using real-world healthcare datasets
-* Deploy the complete application on a cloud platform
-
----
-
-## ⚠️ Disclaimer
-
-HealthSense API is an educational Machine Learning project and is not intended to provide medical diagnoses.
-
-The predictions generated by the system should not be considered professional medical advice. Users should consult a qualified healthcare professional for medical concerns or emergencies.
+* ⌚ Integrate with a real smartwatch to automatically collect health parameters
+* 📡 Support real-time wearable sensor monitoring
+* 🩺 Train the model using real-world healthcare datasets
+* 📈 Advanced health analytics and trend visualization
+* 🗄️ Cloud database for long-term health records
+* 🚨 Emergency contact and health alert system
+* 🤖 More advanced personalized AI recommendations
+* 🌍 Support multiple wearable devices
+* 🌐 Deploy the complete HealthSense AI ecosystem on the cloud
 
 ---
 
-## 👩‍💻 Author
+# ⚠️ Disclaimer
 
-**Kanika Kumar**
+HealthSense AI is an educational project developed for learning and demonstration purposes.
 
-B.Tech Computer Science and Engineering
-VIT Bhopal University
+The predictions generated by the application and the AI-generated health suggestions **are not medical diagnoses** and should **not** be considered professional medical advice.
 
-GitHub: `kanika-kumar05`
+Always consult a qualified healthcare professional regarding any medical concerns.
 
 ---
 
-## ⭐ Support
 
-If you found this project useful, consider giving the repository a ⭐.
+# ⭐ If you like this project...
+
+If you found this project useful, consider giving it a ⭐ on GitHub.
+
+It motivates us to keep improving HealthSense AI and build even smarter healthcare solutions.
+
+---
+
+
+
+<p align="center">
+  <b>🩺 HealthSense AI</b><br>
+  <i>Predict Today • Prevent Tomorrow • Live Healthier ❤️</i>
+</p>
